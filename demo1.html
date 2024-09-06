@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Top Picks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+     body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            overflow: hidden; /* Prevent background scroll when modal is open */
+        }
+
+        .modal {
+            display: none; /* Hide modal by default */
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            overflow-y: auto; /* Allow vertical scroll if content exceeds viewport */
+        }
+
+        .modal-content {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh; /* Limit height to 90% of viewport */
+            overflow-y: auto; /* Add scroll inside modal if content overflows */
+        }
+
+        /* Make scrollbar visible in WebKit browsers */
+        .modal-content::-webkit-scrollbar {
+            width: 10px; /* Width of the scrollbar */
+        }
+
+        .modal-content::-webkit-scrollbar-track {
+            background: #333; /* Track background */
+        }
+
+        .modal-content::-webkit-scrollbar-thumb {
+            background-color: #888; /* Scrollbar thumb */
+            border-radius: 10px; /* Roundness of the scroll thumb */
+            border: 2px solid #333; /* Padding around the scrollbar thumb */
+        }
+
+        .close-button {
+            color: #fff;
+            float: right;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .content-row {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 15px;
+            flex-wrap: wrap; /* Allows wrapping of images in smaller screens */
+        }
+
+        .content-row img {
+            width: 150px;
+            height: auto;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 600px) {
+            .content-row img {
+                width: 45%; /* Adjust width for two images per row */
+            }
+        }
+    </style>
+
+<button id="openModalBtn">Explore</button>
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h1>Today's Top Picks for You</h1>
+            <div class="content-row">
+                <img src="./Assests/download (1).jpg" alt="Movie 1">
+                <img src="./Assests/download (1).jpg" alt="Movie 2">
+                <img src="./Assests/download (1).jpg" alt="Movie 3">
+                <img src="./Assests/download (1).jpg" alt="Movie 4">
+            </div>
+            <div class="content-row">
+                <img src="./Assests/download (1).jpg" alt="Movie 5">
+                <img src="./Assests/download (1).jpg" alt="Movie 6">
+                <img src="./Assests/download (1).jpg" alt="Movie 7">
+                <img src="./Assests/download (1).jpg" alt="Movie 8">
+            </div>
+            <div class="content-row">
+                <img src="./Assests/download (1).jpg" alt="Movie 5">
+                <img src="./Assests/download (1).jpg" alt="Movie 6">
+                <img src="./Assests/download (1).jpg" alt="Movie 7">
+                <img src="./Assests/download (1).jpg" alt="Movie 8">
+            </div>
+            <div class="content-row">
+                <img src="./Assests/download (1).jpg" alt="Movie 5">
+                <img src="./Assests/download (1).jpg" alt="Movie 6">
+                <img src="./Assests/download (1).jpg" alt="Movie 7">
+                <img src="./Assests/download (1).jpg" alt="Movie 8">
+            </div>
+            <div class="content-row">
+                <img src="./Assests/download (1).jpg" alt="Movie 5">
+                <img src="./Assests/download (1).jpg" alt="Movie 6">
+                <img src="./Assests/download (1).jpg" alt="Movie 7">
+                <img src="./Assests/download (1).jpg" alt="Movie 8">
+            </div>
+            <div class="content-row">
+                <img src="./Assests/download (1).jpg" alt="Movie 5">
+                <img src="./Assests/download (1).jpg" alt="Movie 6">
+                <img src="./Assests/download (1).jpg" alt="Movie 7">
+                <img src="./Assests/download (1).jpg" alt="Movie 8">
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.querySelector('.modal');
+            const openModalBtn = document.getElementById('openModalBtn');
+            const closeButton = document.querySelector('.close-button');
+
+            openModalBtn.addEventListener('click', () => {
+                setTimeout(() => {
+                    modal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden'; // Disable body scroll when modal is open
+                }, 2000); // Delay opening the modal by 2000ms (2 seconds)
+            });
+
+            closeButton.addEventListener('click', () => {
+                modal.style.display = 'none';
+                document.body.style.overflow = ''; // Restore body scroll
+            });
+        });
+    </script>
+</body>
+</html>

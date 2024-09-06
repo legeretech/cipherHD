@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CipherHD</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="hd-banner-header" id="main-header">
+        <div class="hd-banner-logo">CipherHD</div>
+        <nav class="hd-banner-nav" id="navbar">
+            <a href="#">Home</a>
+            <a href="#">TV Shows</a>
+            <a href="#">Movies</a>
+            <a href="signin.html">Login & Register</a>
+        </nav>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <main>
+        <section class="hd-banner-hero">
+            <video class="hd-banner-hero-video" autoplay loop muted>
+                <source src="./Assests/videoplayback (1).mp4" type="video/mp4">
+            </video>
+            <div class="hd-banner-hero-content">
+                <h1>Maharaja</h1>
+                <p>A gripping tale of power, corruption, and justice in modern India.</p>
+                <button class="hd-banner-btn hd-banner-btn-play">Play</button>
+                <button class="hd-banner-btn">More Info</button>
+                <span class="hd-banner-age-rating">U/A 16+</span>
+            </div>
+        </section>
+    </main>
+
+<!-- modal section -->
+
+<div class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h1>Today's Top Picks for You</h1>
+        <div class="content-row">
+            <img src="./Assests/download (1).jpg" alt="Movie 1">
+            <img src="./Assests/download (1).jpg" alt="Movie 2">
+            <img src="./Assests/download (1).jpg" alt="Movie 3">
+            <img src="./Assests/download (1).jpg" alt="Movie 4">
+        </div>
+        <div class="content-row">
+            <img src="./Assests/download (1).jpg" alt="Movie 5">
+            <img src="./Assests/download (1).jpg" alt="Movie 6">
+            <img src="./Assests/download (1).jpg" alt="Movie 7">
+            <img src="./Assests/download (1).jpg" alt="Movie 8">
+        </div>
+        <div class="content-row">
+            <img src="./Assests/download (1).jpg" alt="Movie 5">
+            <img src="./Assests/download (1).jpg" alt="Movie 6">
+            <img src="./Assests/download (1).jpg" alt="Movie 7">
+            <img src="./Assests/download (1).jpg" alt="Movie 8">
+        </div>
+        <div class="content-row">
+            <img src="./Assests/download (1).jpg" alt="Movie 5">
+            <img src="./Assests/download (1).jpg" alt="Movie 6">
+            <img src="./Assests/download (1).jpg" alt="Movie 7">
+            <img src="./Assests/download (1).jpg" alt="Movie 8">
+        </div>
+        <div class="content-row">
+            <img src="./Assests/download (1).jpg" alt="Movie 5">
+            <img src="./Assests/download (1).jpg" alt="Movie 6">
+            <img src="./Assests/download (1).jpg" alt="Movie 7">
+            <img src="./Assests/download (1).jpg" alt="Movie 8">
+        </div>
+        <div class="content-row">
+            <img src="./Assests/download (1).jpg" alt="Movie 5">
+            <img src="./Assests/download (1).jpg" alt="Movie 6">
+            <img src="./Assests/download (1).jpg" alt="Movie 7">
+            <img src="./Assests/download (1).jpg" alt="Movie 8">
+        </div>
+    </div>
+</div>
+<!-- modal section -->
+    <!-- image slider section -->
+    <div class="movie-slider-container">
+        <div class="movie-slider-header">
+            <h2 style="color: black; ">My List 1</h2>
+            <button id="openModalBtn"  style="color: black; " class="movie-slider-header a">Explore All</button>
+            <!-- <a id="openModalBtn"  style="color: black;" href="#">Explore All</a> -->
+        </div>
+        <button class="movie-slider-arrow-button movie-slider-arrow-left" data-slider="slider1">&lt;</button>
+        <button class="movie-slider-arrow-button movie-slider-arrow-right" data-slider="slider1">&gt;</button>
+        <div class="movie-slider" id="slider1">
+            <div class="movie-slider-item">
+                <a href="#">
+                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
+                </a>
+            </div>
+            <div class="movie-slider-item">
+                <a href="#">
+                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
+                </a>
+            </div>
+            <div class="movie-slider-item">
+                <a href="#">
+                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
+                </a>
+            </div>
+            <div class="movie-slider-item">
+                <a href="#">
+                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
+                </a>
+            </div>
+            <div class="movie-slider-item">
+                <a href="#">
+                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
+                </a>
+            </div>
+            <div class="movie-slider-item">
+                <a href="#">
+                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
+                </a>
+            </div>
+
+         
+            <!-- Add more slider items as needed -->
+        </div>
+    </div>
+
+    <div class="movie-slider-container">
+        <div class="movie-slider-header">
+            <h2 style="color: black; " >My List 2</h2>
+            <button id="openModalBtn"  style="color: black; " class="movie-slider-header a">Explore All</button>
+        </div>
+        <button class="movie-slider-arrow-button movie-slider-arrow-left" data-slider="slider2">&lt;</button>
+        <button class="movie-slider-arrow-button movie-slider-arrow-right" data-slider="slider2">&gt;</button>
+        <div class="movie-slider" id="slider2">
+            <div class="movie-slider-item">
+                <a href="#">
+                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
+                </a>
+            </div>
+            <div class="movie-slider-item">
+                <a href="#">
+                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
+                </a>
+            </div>
+            <div class="movie-slider-item">
+                <a href="#">
+                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
+                </a>
+            </div>
+            <div class="movie-slider-item">
+                <a href="#">
+                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
+                </a>
+            </div>
+            <div class="movie-slider-item">
+                <a href="#">
+                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
+                </a>
+            </div>
+            <div class="movie-slider-item">
+                <a href="#">
+                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
+                </a>
+            </div>
+            <!-- Add more slider items as needed -->
+        </div>
+    </div>
+
+    <div class="movie-slider-container">
+        <div class="movie-slider-header">
+            <h2 style="color: black; ">My List 3</h2>
+            <button id="openModalBtn"  style="color: black; " class="movie-slider-header a">Explore All</button>
+        </div>
+        <button class="movie-slider-arrow-button movie-slider-arrow-left" data-slider="slider3">&lt;</button>
+        <button class="movie-slider-arrow-button movie-slider-arrow-right" data-slider="slider3">&gt;</button>
+        <div class="movie-slider" id="slider3">
+            <div class="movie-slider-item">
+                <a  href="#">
+                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
+                </a>
+            </div>
+            <div class="movie-slider-item">
+                <a href="#">
+                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
+                </a>
+            </div>
+            <div class="movie-slider-item">
+                <a href="#">
+                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
+                </a>
+            </div>
+            <div class="movie-slider-item">
+                <a href="#">
+                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
+                </a>
+            </div>
+            <div class="movie-slider-item">
+                <a href="#">
+                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
+                </a>
+            </div> <div class="movie-slider-item">
+                <a href="#">
+                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
+                </a>
+            </div>
+
+            <!-- Add more slider items as needed -->
+        </div>
+    </div>
+
+    <!-- image slider section -->
+    <!-- footer section -->
+    <footer class="footer">
+        <div class="footer-social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="footer-links">
+            <div>
+                <a href="#">Audio Description</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Legal Notices</a>
+            </div>
+            <div>
+                <a href="#">Help Centre</a>
+                <a href="#">Jobs</a>
+                <a href="#">Cookie Preferences</a>
+            </div>
+            <div>
+                <a href="#">Gift Cards</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Corporate Information</a>
+            </div>
+            <div>
+                <a href="#">Media Centre</a>
+                <a href="#">Privacy</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+        <button class="service-code-button">Service Code</button>
+        <p class="footer-copyright">© 1997-2024 CipherHD, Inc.</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- footer section -->
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('hd-banner-header-black');
+            } else {
+                header.classList.remove('hd-banner-header-black');
+            }
+        });
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navbar = document.getElementById('navbar');
+    const header = document.getElementById('main-header');
+
+    hamburger.addEventListener('click', () => {
+        header.classList.toggle('hd-banner-header-active');
+        navbar.classList.toggle('show'); // Toggle visibility of the navbar
+    });
+});
+
+    </script>
+
+
+<!-- image slider section -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const scrollAmount = 200; // Amount to scroll when arrow is clicked
+
+        function scrollSlider(sliderId, direction) {
+            const slider = document.getElementById(sliderId);
+            if (slider) {
+                if (direction === 'left') {
+                    slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                } else if (direction === 'right') {
+                    slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                }
+            }
+        }
+
+        const leftButtons = document.querySelectorAll('.movie-slider-arrow-left');
+        const rightButtons = document.querySelectorAll('.movie-slider-arrow-right');
+
+        leftButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const sliderId = button.getAttribute('data-slider');
+                scrollSlider(sliderId, 'left');
+            });
+        });
+
+        rightButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const sliderId = button.getAttribute('data-slider');
+                scrollSlider(sliderId, 'right');
+            });
+        });
+    });
+</script>
+
+<!-- image slider section -->
+
+<!-- today details popup -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.querySelector('.modal');
+        const openModalBtn = document.getElementById('openModalBtn');
+        const closeButton = document.querySelector('.close-button');
+
+        openModalBtn.addEventListener('click', () => {
+            setTimeout(() => {
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Disable body scroll when modal is open
+            }, 2000); // Delay opening the modal by 2000ms (2 seconds)
+        });
+
+        closeButton.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = ''; // Restore body scroll
+        });
+    });
+</script>
+<!-- today details popup -->
+</body>
+</html>

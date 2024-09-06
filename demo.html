@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Slider</title>
+    <style>
+      body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #181818;
+            color: #fff;
+        }
+
+        .movie-slider-container {
+            width: 100%;
+            overflow: hidden;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative; /* Positioning context for arrows */
+        }
+
+        .movie-slider-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .movie-slider-header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .movie-slider-header a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .movie-slider {
+            display: flex;
+            overflow-x: auto; /* Allow horizontal scroll */
+            scrollbar-width: none; /* Hide scrollbar for Firefox */
+            -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+
+        .movie-slider::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+        }
+
+        .movie-slider-item {
+            flex: 0 0 16.66%; /* Adjust width for 6 images on desktop */
+            margin-right: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .movie-slider-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Arrow Buttons */
+        .movie-slider-arrow-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1000;
+            border-radius: 50%;
+            font-size: 20px;
+        }
+
+        .movie-slider-arrow-left {
+            left: 10px;
+        }
+
+        .movie-slider-arrow-right {
+            right: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1300px) {
+            .movie-slider-item {
+                flex: 0 0 20%; /* Adjust width for large screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .movie-slider-item {
+                flex: 0 0 45%; /* Adjust width for tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .movie-slider-item {
+                flex: 0 0 90%; /* Adjust width for mobile */
+            }
+
+            .movie-slider-arrow-button {
+                display: none; /* Hide arrows on very small screens */
+            }
+        }
+
+        @media (min-width: 1300px) {
+            .movie-slider-arrow-button {
+                display: block; /* Ensure arrows are visible on large screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="movie-slider-container">
+        <div class="movie-slider-header">
+            <h2>My List 1</h2>
+            <a href="#">Explore All</a>
+        </div>
+        <button class="movie-slider-arrow-button movie-slider-arrow-left" data-slider="slider1">&lt;</button>
+        <button class="movie-slider-arrow-button movie-slider-arrow-right" data-slider="slider1">&gt;</button>
+        <div class="movie-slider" id="slider1">
+            <div class="movie-slider-item">
+                <a href="#">
+                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
+                </a>
+            </div>
+         
+            <!-- Add more slider items as needed -->
+        </div>
+    </div>
+
+    <div class="movie-slider-container">
+        <div class="movie-slider-header">
+            <h2>My List 2</h2>
+            <a id="openModalBtn" href="#">Explore All</a>
+        </div>
+        <button class="movie-slider-arrow-button movie-slider-arrow-left" data-slider="slider2">&lt;</button>
+        <button class="movie-slider-arrow-button movie-slider-arrow-right" data-slider="slider2">&gt;</button>
+        <div class="movie-slider" id="slider2">
+            <div class="movie-slider-item">
+                <a href="#">
+                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
+                </a>
+            </div>
+           
+            <!-- Add more slider items as needed -->
+        </div>
+    </div>
+
+    <div class="movie-slider-container">
+        <div class="movie-slider-header">
+            <h2>My List 3</h2>
+            <a id="openModalBtn" href="#">Explore All</a>
+        </div>
+        <button class="movie-slider-arrow-button movie-slider-arrow-left" data-slider="slider3">&lt;</button>
+        <button class="movie-slider-arrow-button movie-slider-arrow-right" data-slider="slider3">&gt;</button>
+        <div class="movie-slider" id="slider3">
+            <div class="movie-slider-item">
+                <a href="#">
+                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
+                </a>
+            </div>
+        
+            <!-- Add more slider items as needed -->
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const scrollAmount = 200; // Amount to scroll when arrow is clicked
+
+            function scrollSlider(sliderId, direction) {
+                const slider = document.getElementById(sliderId);
+                if (slider) {
+                    if (direction === 'left') {
+                        slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                    } else if (direction === 'right') {
+                        slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                    }
+                }
+            }
+
+            const leftButtons = document.querySelectorAll('.movie-slider-arrow-left');
+            const rightButtons = document.querySelectorAll('.movie-slider-arrow-right');
+
+            leftButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const sliderId = button.getAttribute('data-slider');
+                    scrollSlider(sliderId, 'left');
+                });
+            });
+
+            rightButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const sliderId = button.getAttribute('data-slider');
+                    scrollSlider(sliderId, 'right');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
