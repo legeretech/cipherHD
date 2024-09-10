@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix User Account</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #141414;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .user-account-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            margin-top: 80px;
+            margin-bottom: 50px;
+        }
+
+        .user-account-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .user-account-title {
+            font-size: 40px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 50px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .user-profile:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .user-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #e50914;
+        }
+
+        .user-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .user-info {
+            flex-grow: 1;
+        }
+
+        .user-name {
+            font-size: 32px;
+            margin: 0 0 10px;
+        }
+
+        .user-email {
+            font-size: 18px;
+            color: #999;
+            margin: 0 0 20px;
+        }
+
+        .user-stats {
+            display: flex;
+            gap: 30px;
+        }
+
+        .user-stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .account-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .account-option {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .account-option:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .account-option-title {
+            font-size: 24px;
+            margin: 0 0 15px;
+        }
+
+        .account-option-description {
+            font-size: 16px;
+            color: #999;
+            margin: 0 0 20px;
+        }
+
+        .account-option-btn {
+            background-color: #e50914;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .account-option-btn:hover {
+            background-color: #f40612;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #181818;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .user-account-title {
+                font-size: 32px;
+            }
+
+            .user-profile {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .user-avatar {
+                width: 120px;
+                height: 120px;
+            }
+
+            .user-name {
+                font-size: 28px;
+            }
+
+            .user-email {
+                font-size: 16px;
+            }
+
+            .user-stats {
+                justify-content: center;
+            }
+
+            .account-option-title {
+                font-size: 20px;
+            }
+
+            .account-option-description {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hd-banner-header" id="main-header">
+        <div class="hd-banner-logo">CipherHD</div>
+        <nav class="hd-banner-nav" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="#">TV Shows</a>
+            <a href="#">Movies</a>
+            <a href="signin.html">Login & Register</a>
+    
+            <!-- Profile Section -->
+            <div class="profile-section">
+                <img src="./Assests/profiletestimonial.png" alt="Profile Icon" class="profile-icon" id="profile-icon" />
+                <div class="profile-dropdown" id="profile-dropdown">
+                    <a href="account.html">Account</a>
+                    <a href="helpcentre.html">Help</a>
+                </div>
+            </div>
+        </nav>
+    
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <script>
+        document.getElementById('profile-icon').addEventListener('click', function() {
+        document.querySelector('.profile-section').classList.toggle('active');
+    });
+
+    </script> 
+
+    <div class="user-account-section">
+        <div class="user-account-header">
+            <h1 class="user-account-title">Account</h1>
+        </div>
+        
+        <div class="user-profile">
+            <div class="user-avatar">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABdpkabKqQAxyWzo6QW_ZnPz1IZLqlmNfK-t4L1VIeV1DY00JhLo_LMVFp936keDxj-V5UELAVJrU--iUUY2MaDxQSSO-0qw.png?r=e6e" alt="User Avatar">
+            </div>
+            <div class="user-info">
+                <h2 class="user-name">John Doe</h2>
+                <p class="user-email">johndoe@example.com</p>
+                <div class="user-stats">
+                    <div class="user-stat">
+                        <p class="stat-value">237</p>
+                        <p class="stat-label">Watched</p>
+                    </div>
+                    <div class="user-stat">
+                        <p class="stat-value">54</p>
+                        <p class="stat-label">My List</p>
+                    </div>
+                    <div class="user-stat">
+                        <p class="stat-value">Premium</p>
+                        <p class="stat-label">Plan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="account-options">
+            <div class="account-option">
+                <h3 class="account-option-title">Membership & Billing</h3>
+                <p class="account-option-description">Manage your membership and billing information.</p>
+                <button class="account-option-btn" onclick="openModal('membershipModal')">Manage</button>
+            </div>
+            <div class="account-option">
+                <h3 class="account-option-title">Plan Details</h3>
+                <p class="account-option-description">View or change your current plan.</p>
+                <button class="account-option-btn" onclick="openModal('planModal')">View Plans</button>
+            </div>
+            <div class="account-option">
+                <h3 class="account-option-title">Profile & Parental Controls</h3>
+                <p class="account-option-description">Manage profiles and parental controls.</p>
+                <button class="account-option-btn" onclick="openModal('profileModal')">Manage Profiles</button>
+            </div>
+            <div class="account-option">
+                <h3 class="account-option-title">Security & Privacy</h3>
+                <p class="account-option-description">Control your account security and privacy settings.</p>
+                <button class="account-option-btn" onclick="openModal('securityModal')">Manage Settings</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="membershipModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('membershipModal')">&times;</span>
+            <h2>Membership & Billing</h2>
+            <p>Your current plan: Premium</p>
+            <p>Billing cycle: Monthly</p>
+            <p>Next billing date: June 15, 2023</p>
+        </div>
+    </div>
+
+    <div id="planModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('planModal')">&times;</span>
+            <h2>Plan Details</h2>
+            <p>Current Plan: Premium</p>
+            <p>Price: $19.99/month</p>
+            <p>Features: 4K + HDR, 4 screens at a time</p>
+        </div>
+    </div>
+
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('profileModal')">&times;</span>
+            <h2>Profile & Parental Controls</h2>
+            <p>Manage profiles and set content restrictions for each profile.</p>
+        </div>
+    </div>
+
+    <div id="securityModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('securityModal')">&times;</span>
+            <h2>Security & Privacy</h2>
+            <p>Manage your account security settings and privacy preferences.</p>
+        </div>
+    </div>
+<!-- footer -->
+   <!-- footer section -->
+
+   <div style="background-color: black;">
+    <footer class="footer-container">
+        <div class="footer-social-icons">
+            <a href="#" aria-label="Facebook"></a>
+            <a href="#" aria-label="Instagram"></a>
+            <a href="#" aria-label="Twitter"></a>
+            <a href="#" aria-label="YouTube"></a>
+        </div>
+        <div class="footer-links">
+            <a href="#">Audio Description</a>
+            <a href="#">Help Centre</a>
+            <a href="#">Gift Cards</a>
+            <a href="#">Media Centre</a>
+            <a href="#">Investor Relations</a>
+            <a href="#">Jobs</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy</a>
+            <a href="#">Legal Notices</a>
+            <a href="#">Cookie Preferences</a>
+            <a href="#">Corporate Information</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="footer-service-code">
+            Service Code
+        </div>
+        <div class="footer-copyright">
+            © 1997-2024 YourCompany, Inc.
+        </div>
+    </footer>
+</div>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- footer section -->
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target.className === "modal") {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+
+
+<script>
+    window.addEventListener('scroll', function() {
+        var header = document.getElementById('main-header');
+        if (window.scrollY > 50) {
+            header.classList.add('hd-banner-header-black');
+        } else {
+            header.classList.remove('hd-banner-header-black');
+        }
+    });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+const hamburger = document.getElementById('hamburger');
+const navbar = document.getElementById('navbar');
+const header = document.getElementById('main-header');
+
+hamburger.addEventListener('click', () => {
+    header.classList.toggle('hd-banner-header-active');
+    navbar.classList.toggle('show'); // Toggle visibility of the navbar
+});
+});
+
+</script>
+</body>
+</html>

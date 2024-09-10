@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Help Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+      :root {
+            --netflix-red: #e50914;
+            --netflix-black: #141414;
+            --netflix-dark-gray: #222;
+            --netflix-light-gray: #757575;
+        }
+body {
+    background-color: var(--netflix-black);
+}
+        .helpcentre-container-main {
+            font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: var(--netflix-black);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .helpcentre-container {
+            max-width: 1200px;
+            margin: 0 auto;
+    
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .helpcentre-header {
+            background-color: var(--netflix-black);
+            padding: 20px 0;
+            border-bottom: 1px solid var(--netflix-dark-gray);
+        }
+
+        .helpcentre-header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .helpcentre-logo {
+            width: 100px;
+        }
+
+        .helpcentre-nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .helpcentre-nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .helpcentre-nav-link:hover {
+            color: var(--netflix-red);
+        }
+
+        /* Help Center Styles */
+        .helpcentre-help-center {
+            padding: 60px 0;
+        }
+
+        .helpcentre-help-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .helpcentre-help-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .helpcentre-help-subtitle {
+            font-size: 20px;
+            color: var(--netflix-light-gray);
+        }
+
+        .helpcentre-search-bar {
+            display: flex;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .helpcentre-search-input {
+            flex-grow: 1;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            background-color: var(--netflix-dark-gray);
+            color: #fff;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .helpcentre-search-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: var(--netflix-red);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 0 4px 4px 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .helpcentre-search-button:hover {
+            background-color: #f40612;
+        }
+
+        /* Help Categories */
+        .helpcentre-help-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .helpcentre-help-category {
+            background-color: var(--netflix-dark-gray);
+            padding: 30px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .helpcentre-help-category:hover {
+            transform: translateY(-5px);
+            background-color: #333;
+        }
+
+        .helpcentre-category-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .helpcentre-category-title i {
+            margin-right: 10px;
+            color: var(--netflix-red);
+        }
+
+        .helpcentre-category-description {
+            font-size: 16px;
+            color: var(--netflix-light-gray);
+            margin-bottom: 20px;
+        }
+
+        .helpcentre-category-link {
+            color: var(--netflix-red);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .helpcentre-category-link:hover {
+            color: #f40612;
+        }
+
+        /* FAQ Section */
+        .helpcentre-faq-section {
+            margin-bottom: 60px;
+        }
+
+        .helpcentre-faq-title {
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .helpcentre-faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .helpcentre-faq-item {
+            background-color: var(--netflix-dark-gray);
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .helpcentre-faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .helpcentre-faq-question:hover {
+            background-color: #333;
+        }
+
+        .helpcentre-faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .helpcentre-faq-answer.active {
+            padding: 20px;
+            max-height: 1000px;
+        }
+
+        /* Footer Styles */
+        .helpcentre-footer {
+            background-color: var(--netflix-dark-gray);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .helpcentre-footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .helpcentre-footer-link {
+            color: var(--netflix-light-gray);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .helpcentre-footer-link:hover {
+            color: #fff;
+        }
+
+        .helpcentre-footer-text {
+            color: var(--netflix-light-gray);
+            font-size: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .helpcentre-help-title {
+                font-size: 36px;
+            }
+
+            .helpcentre-help-subtitle {
+                font-size: 18px;
+            }
+
+            .helpcentre-search-input, .helpcentre-search-button {
+                font-size: 16px;
+            }
+
+            .helpcentre-category-title {
+                font-size: 20px;
+            }
+
+            .helpcentre-category-description {
+                font-size: 14px;
+            }
+
+            .helpcentre-faq-title {
+                font-size: 28px;
+            }
+
+            .helpcentre-faq-question {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="container-main"> 
+        <header class="hd-banner-header" id="main-header">
+            <div class="hd-banner-logo">CipherHD</div>
+            <nav class="hd-banner-nav" id="navbar">
+                <a href="index.html">Home</a>
+                <a href="#">TV Shows</a>
+                <a href="#">Movies</a>
+                <a href="signin.html">Login & Register</a>
+        
+                <!-- Profile Section -->
+                <div class="profile-section">
+                    <img src="./Assests/profiletestimonial.png" alt="Profile Icon" class="profile-icon" id="profile-icon" />
+                    <div class="profile-dropdown" id="profile-dropdown">
+                        <a href="account.html">Account</a>
+                        <a href="helpcentre.html">Help</a>
+                    </div>
+                </div>
+            </nav>
+        
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+        <script>
+            document.getElementById('profile-icon').addEventListener('click', function() {
+            document.querySelector('.profile-section').classList.toggle('active');
+        });
+        </script> 
+
+<main class="helpcentre-help-center">
+    <div class="helpcentre-container">
+        <header class="helpcentre-help-header">
+            <h1 class="helpcentre-help-title">Help Center</h1>
+            <p class="helpcentre-help-subtitle">What can we help you with?</p>
+        </header>
+
+        <div class="helpcentre-search-bar">
+            <input type="text" class="helpcentre-search-input" placeholder="Search for help topics...">
+            <button class="helpcentre-search-button">Search</button>
+        </div>
+
+        <div class="helpcentre-help-categories">
+            <div class="helpcentre-help-category">
+                <h2 class="helpcentre-category-title"><i class="fas fa-user-circle"></i> Account & Billing</h2>
+                <p class="helpcentre-category-description">Manage your account details and billing information.</p>
+                <a href="#" class="helpcentre-category-link">Learn More &rarr;</a>
+            </div>
+            <div class="helpcentre-help-category">
+                <h2 class="helpcentre-category-title"><i class="fas fa-credit-card"></i> Plans & Pricing</h2>
+                <p class="helpcentre-category-description">Explore our plans and pricing options.</p>
+                <a href="#" class="helpcentre-category-link">Learn More &rarr;</a>
+            </div>
+            <div class="helpcentre-help-category">
+                <h2 class="helpcentre-category-title"><i class="fas fa-play-circle"></i> Streaming & Playback</h2>
+                <p class="helpcentre-category-description">Troubleshoot playback issues and improve your streaming experience.</p>
+                <a href="#" class="helpcentre-category-link">Learn More &rarr;</a>
+            </div>
+            <div class="helpcentre-help-category">
+                <h2 class="helpcentre-category-title"><i class="fas fa-question-circle"></i> Troubleshooting</h2>
+                <p class="helpcentre-category-description">Find solutions to common issues and errors.</p>
+                <a href="#" class="helpcentre-category-link">Learn More &rarr;</a>
+            </div>
+        </div>
+
+        <section class="helpcentre-faq-section">
+            <h2 class="helpcentre-faq-title">Frequently Asked Questions</h2>
+            <div class="helpcentre-faq-list">
+                <div class="helpcentre-faq-item">
+                    <div class="helpcentre-faq-question">
+                        <span>How do I change my password?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="helpcentre-faq-answer">
+                        <p>To change your password, go to your account settings and select 'Change Password'. Follow the instructions provided.</p>
+                    </div>
+                </div>
+                <div class="helpcentre-faq-item">
+                    <div class="helpcentre-faq-question">
+                        <span>Can I cancel my subscription at any time?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="helpcentre-faq-answer">
+                        <p>Yes, you can cancel your subscription at any time through your account settings.</p>
+                    </div>
+                </div>
+                <div class="helpcentre-faq-item">
+                    <div class="helpcentre-faq-question">
+                        <span>What should I do if I forget my account email?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="helpcentre-faq-answer">
+                        <p>If you forget your account email, you can use the email recovery option on the login page to recover it.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+  <!-- footer section -->
+
+  <div style="background-color: black;">
+    <footer class="footer-container">
+        <div class="footer-social-icons">
+            <a href="#" aria-label="Facebook"></a>
+            <a href="#" aria-label="Instagram"></a>
+            <a href="#" aria-label="Twitter"></a>
+            <a href="#" aria-label="YouTube"></a>
+        </div>
+        <div class="footer-links">
+            <a href="#">Audio Description</a>
+            <a href="#">Help Centre</a>
+            <a href="#">Gift Cards</a>
+            <a href="#">Media Centre</a>
+            <a href="#">Investor Relations</a>
+            <a href="#">Jobs</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy</a>
+            <a href="#">Legal Notices</a>
+            <a href="#">Cookie Preferences</a>
+            <a href="#">Corporate Information</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="footer-service-code">
+            Service Code
+        </div>
+        <div class="footer-copyright">
+            © 1997-2024 YourCompany, Inc.
+        </div>
+    </footer>
+</div>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- footer section -->
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                answer.classList.toggle('active');
+                icon.classList.toggle('fa-chevron-up');
+                icon.classList.toggle('fa-chevron-down');
+            });
+        });
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+<script>
+    document.querySelectorAll('.helpcentre-faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            answer.classList.toggle('active');
+        });
+    });
+</script>
+    </section>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('hd-banner-header-black');
+            } else {
+                header.classList.remove('hd-banner-header-black');
+            }
+        });
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navbar = document.getElementById('navbar');
+    const header = document.getElementById('main-header');
+
+    hamburger.addEventListener('click', () => {
+        header.classList.toggle('hd-banner-header-active');
+        navbar.classList.toggle('show'); // Toggle visibility of the navbar
+    });
+});
+
+    </script>
+</body>
+</html>

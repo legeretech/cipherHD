@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+ 
     <header class="hd-banner-header" id="main-header">
         <div class="hd-banner-logo">CipherHD</div>
         <nav class="hd-banner-nav" id="navbar">
@@ -15,13 +16,29 @@
             <a href="#">TV Shows</a>
             <a href="#">Movies</a>
             <a href="signin.html">Login & Register</a>
+    
+            <!-- Profile Section -->
+            <div class="profile-section">
+                <img src="./Assests/profiletestimonial.png" alt="Profile Icon" class="profile-icon" id="profile-icon" />
+                <div class="profile-dropdown" id="profile-dropdown">
+                    <a href="account.html">Account</a>
+                    <a href="helpcentre.html">Help</a>
+                </div>
+            </div>
         </nav>
+    
         <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
             <span></span>
         </div>
     </header>
+<script>
+    document.getElementById('profile-icon').addEventListener('click', function() {
+    document.querySelector('.profile-section').classList.toggle('active');
+});
+
+</script>    
     <main>
         <section class="hd-banner-hero">
             <video class="hd-banner-hero-video" autoplay loop muted>
@@ -39,7 +56,7 @@
 
 <!-- modal section -->
 
-<div class="modal">
+<div class="modal" id="modal">
     <div class="modal-content">
         <span class="close-button">&times;</span>
         <h1>Today's Top Picks for You</h1>
@@ -67,186 +84,846 @@
             <img src="./Assests/download (1).jpg" alt="Movie 7">
             <img src="./Assests/download (1).jpg" alt="Movie 8">
         </div>
-        <div class="content-row">
-            <img src="./Assests/download (1).jpg" alt="Movie 5">
-            <img src="./Assests/download (1).jpg" alt="Movie 6">
-            <img src="./Assests/download (1).jpg" alt="Movie 7">
-            <img src="./Assests/download (1).jpg" alt="Movie 8">
-        </div>
-        <div class="content-row">
-            <img src="./Assests/download (1).jpg" alt="Movie 5">
-            <img src="./Assests/download (1).jpg" alt="Movie 6">
-            <img src="./Assests/download (1).jpg" alt="Movie 7">
-            <img src="./Assests/download (1).jpg" alt="Movie 8">
-        </div>
+
+        <!-- Add more content rows if needed -->
     </div>
 </div>
 <!-- modal section -->
+<!-- detail section -->
+<section id="detail-modal" class="movie-detail-section">
+    <div class="movie-detail-section-second">
+    
+        <div class="detail-container">
+            <div class="detail-movie-details">
+                <div class="detail-backdrop">
+                    <div class="detail-content">
+                        <h1 class="detail-title">Kuttey</h1>
+                        <p class="detail-subtitle">Come, let's have a drink for old times' sake.</p>
+                        <div class="detail-controls">
+                            <button class="detail-btn detail-btn-play">▶ Play</button>
+                            <button class="detail-btn detail-btn-secondary">+</button>
+                            <button class="detail-btn detail-btn-secondary">👍</button>
+                        </div>
+                        <div class="detail-info">
+                            <div class="detail-info-left">
+                                <p class="detail-metadata">2023 1h 48m HD</p>
+                                <p class="detail-metadata">U/A 16+ gore, language, sexual content, sexual violence, substances, violence</p>
+                                <p class="detail-description">Crooked cops, an aging crime lord and cutthroat rebels collide when a plan to loot a high-security van transporting cash careens into chaos.</p>
+                            </div>
+                            <div class="detail-info-right">
+                                <p class="detail-cast"><strong>Cast:</strong> Arjun Kapoor, Kumud Mishra, Tabu, more</p>
+                                <p class="detail-genres"><strong>Genres:</strong> Hindi-Language Movies, Bollywood Movies, Crime Movies</p>
+                                <p class="detail-tone"><strong>This movie is:</strong> Gritty, Dark</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="close" class="detail-close-btn">×</button>
+            </div>
+        </div>
+    
+        <!-- second section -->
+        <div class="episode-list-main">
+            <div class="episode-list">
+                <div class="episode-header">
+                    <h1>Episodes</h1>
+                    <span class="series-title">Kohrra</span>
+                </div>
+                
+                <div class="episode">
+                    <!-- <div class="episode-number">1</div> -->
+                    <img src="./Assests/download (1).jpg" alt="Episode 1" class="episode-thumbnail">
+                    <div class="episode-details">
+                        <div class="episode-title">Episode 1</div>
+                        <div class="episode-duration">48m</div>
+                        <div class="episode-description">After a dead body is found, cops Balbir and Garundi uncover links to a wedding and a missing foreigner. A father's grief pulls him down a rageful path.</div>
+                    </div>
+                </div>
+        
+                <div class="episode">
+                
+                    <img src="./Assests/download (1).jpg" alt="Episode 2" class="episode-thumbnail">
+                    <div class="episode-details">
+                        <div class="episode-title">Episode 2</div>
+                        <div class="episode-duration">45m</div>
+                        <div class="episode-description">An unfolding nightmare traps two families. As cracks grow in Garundi and Balbir's lives, unspoken yearnings emerge. Police chase down new leads.</div>
+                    </div>
+                </div>
+        
+                <div class="episode">
+          
+                    <img src="./Assests/download (1).jpg" alt="Episode 3" class="episode-thumbnail">
+                    <div class="episode-details">
+                        <div class="episode-title">Episode 3</div>
+                        <div class="episode-duration">47m</div>
+                        <div class="episode-description">Nimrat struggles to live under her father's roof. Happy tries to handle a suspicious deal while a brawl involving Paul and Liam sparks new questions.</div>
+                    </div>
+                </div>
+        
+                <div class="episode">
+                 
+                    <img src="./Assests/download (1).jpg" alt="Episode 4" class="episode-thumbnail">
+                    <div class="episode-details">
+                        <div class="episode-title">Episode 4</div>
+                        <div class="episode-duration">52m</div>
+                        <div class="episode-description">A sudden confession could close the case, but lingering doubts remain. Balbir seeks companionship and family pressure pushes Garundi to take charge.</div>
+                    </div>
+                </div>
+        
+                <div class="episode">
+       
+                    <img src="./Assests/download (1).jpg" alt="Episode 5" class="episode-thumbnail">
+                    <div class="episode-details">
+                        <div class="episode-title">Episode 5</div>
+                        <div class="episode-duration">48m</div>
+                        <div class="episode-description">A hit-and-run — or murder? Murky details cloud the investigation. Balbir's violent interference in Nimrat's life sends her spiraling into darkness.</div>
+                    </div>
+                </div>
+        
+                <div class="episode">
+            
+                    <img src="./Assests/download (1).jpg" alt="Episode 6" class="episode-thumbnail">
+                    <div class="episode-details">
+                        <div class="episode-title">Episode 6</div>
+                        <div class="episode-duration">48m</div>
+                        <div class="episode-description">Garundi begins a frantic search when Balbir goes missing. Secrets, pride and the tragic cost of love intertwine in the events leading to Paul's death.</div>
+                    </div>
+                </div>
+            </div>
+    </div>
+        <!-- second section -->
+    
+         <!-- third section -->
+          <div class="detailsecond-grid-container-main">
+            <div class="detailsecond-grid-container" id="movieGrid">
+                <!-- Movie cards will be dynamically added here -->
+            </div>
+            <div class="detailsecond-load-more">
+                <button class="detailsecond-load-more-button" id="loadMoreBtn">Load More</button>
+            </div>
+        
+            <script>
+                const movies = [
+                    { title: "NCIS", seasons: "5 Seasons", rating: "A", quality: "HD", year: 2016, description: "Mark Harmon stars as Leroy Jethro Gibbs, the no-nonsense leader of a quirky group of agents who solve crimes tied to the Navy or Marine Corps.", image: "./Assests/download (1).jpg" },
+                    { title: "CSI", seasons: "6 Seasons", rating: "A", quality: "HD", year: 2015, description: "No prints. No motive. No problem. Gil Grissom (William Petersen) and his brilliant CSI team have countless forensic techniques to identify killers.", image: "./Assests/download (1).jpg" },
+                    { title: "Law & Order: SVU", seasons: "5 Seasons", rating: "U/A 16+", quality: "HD", year: 2009, description: "The dedicated detectives of New York City's elite Special Victims Unit investigate sexually based crimes.", image: "./Assests/download (1).jpg" },
+                    { title: "Article 370", duration: "2h 38m", rating: "U/A 16+", quality: "HD", year: 2024, description: "Ahead of a major constitutional decision, special agent Zooni Haksar is tasked with a secret mission in Kashmir.", image: "./Assests/download (1).jpg" },
+                    { title: "Crooked House", duration: "1h 55m", rating: "U/A 13+", quality: "HD", year: 2017, description: "When a detective investigates the death of his ex-lover's grandfather, he uncovers secrets in her eccentric family.", image: "./Assests/download (1).jpg" },
+                    { title: "Pataas Ladies", duration: "2h 2m", rating: "U/A 13+", quality: "HD", year: 2024, description: "In this comedic satire, a groom mistakenly brings home the wrong bride.", image: "./Assests/download (1).jpg" },
+                ];
+        
+                let currentIndex = 0;
+                const movieGrid = document.getElementById('movieGrid');
+                const loadMoreBtn = document.getElementById('loadMoreBtn');
+        
+                function createMovieCard(movie) {
+                    const card = document.createElement('div');
+                    card.className = 'detailsecond-movie-card';
+                    card.innerHTML = `
+                        <img src="${movie.image}" alt="${movie.title}" class="detailsecond-movie-image">
+                        <div class="detailsecond-movie-title">${movie.seasons || movie.duration}</div>
+                        <div class="detailsecond-movie-info">
+                            <div class="detailsecond-movie-metadata">
+                                <span class="detailsecond-movie-rating">${movie.rating}</span>
+                                <span class="detailsecond-movie-year">${movie.quality} ${movie.year}</span>
+                                <button class="detailsecond-add-button" aria-label="Add to list">+</button>
+                            </div>
+                            <p class="detailsecond-movie-description">${movie.description}</p>
+                        </div>
+                    `;
+                    return card;
+                }
+        
+                function loadMovies(count = 3) {
+                    for (let i = 0; i < count && currentIndex < movies.length; i++) {
+                        movieGrid.appendChild(createMovieCard(movies[currentIndex]));
+                        currentIndex++;
+                    }
+                    if (currentIndex >= movies.length) {
+                        loadMoreBtn.style.display = 'none';
+                    }
+                }
+        
+                loadMoreBtn.addEventListener('click', () => loadMovies());
+        
+                // Initial load
+                loadMovies();
+            </script>
+    </div>
+        <!-- third section -->
+        <!-- fourth section -->
+         <div class="detailthird-info-panel-main">
+        <div class="detailthird-info-panel">
+            <h1>About Monk</h1>
+            
+            <div class="detailthird-info-row">
+                <span class="detailthird-info-label">Creators:</span>
+                Andy Breckman
+            </div>
+            
+            <div class="detailthird-info-row">
+                <span class="detailthird-info-label">Cast:</span>
+                <div class="detailthird-cast-list">
+                    <span class="detailthird-cast-member">Tony Shalhoub</span>
+                    <span class="detailthird-cast-member">Jason Gray-Stanford</span>
+                    <span class="detailthird-cast-member">Ted Levine</span>
+                    <span class="detailthird-cast-member">Traylor Howard</span>
+                    <span class="detailthird-cast-member">Bitty Schram</span>
+                    <span class="detailthird-cast-member">Stanley Kamel</span>
+                    <span class="detailthird-cast-member">Emmy Clarke</span>
+                    <span class="detailthird-cast-member">Kane Ritchotte</span>
+                    <span class="detailthird-cast-member">Héctor Elizondo</span>
+                    <span class="detailthird-cast-member">Melora Hardin</span>
+                </div>
+            </div>
+            
+            <div class="detailthird-info-row">
+                <span class="detailthird-info-label">Genres:</span>
+                <div class="detailthird-genre-list">
+                    <span class="detailthird-genre">TV Dramas</span>
+                    <span class="detailthird-genre">TV Mysteries</span>
+                    <span class="detailthird-genre">TV Comedies</span>
+                    <span class="detailthird-genre">Crime TV Shows</span>
+                    <span class="detailthird-genre">US TV Shows</span>
+                </div>
+            </div>
+            
+            <div class="detailthird-info-row">
+                <span class="detailthird-info-label">This show is:</span>
+                Witty, Quirky, Suspenseful
+            </div>
+            
+            <div class="detailthird-info-row">
+                <span class="detailthird-info-label">Maturity rating:</span>
+                <span class="detailthird-maturity-rating">U/A 13+</span>
+                language, mature themes, threat, tobacco use, violence
+            </div>
+            
+            <div class="detailthird-info-row detailthird-maturity-description">
+                Suitable for persons aged 13 and above and under parental guidance for people under age of 13
+            </div>
+        </div>
+    </div>
+        <!-- fourth section -->
+    </div>
+    </section>
+<!-- detail section -->
+
+ <!-- image slider section -->
+ <!-- image slider video add section -->
+
+<div class="movie-slider-section">
+    <div class="movie-slider-header">
+        <h2 class="movie-slider-h2">Continue watching</h2>
+        <a href="#" id="openModalBtn" class="explore-btn">Explore All &#8250;</a>
+    </div>
+    <div class="movie-slider-carousel-container">
+        <button class="movie-slider-carousel-btn movie-slider-prev-btn" id="prevBtn1">&#10094;</button>
+        <div class="movie-slider-carousel">
+            <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <!-- Video instead of image -->
+                <video id="video1" class="movie-slider-video" src="./Assests/videoplayback (1).mp4" poster="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" preload="metadata">
+                </video>
+                <!-- Video Progress Bar -->
+                <div class="video-progress">
+                    <div class="progress-bar" id="progressBar1"></div>
+                </div>
+                <!-- Hover Info -->
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn" id="playBtn1">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat more movie cards  -->
+       <div class="movie-slider-card">
+                <!-- Video instead of image -->
+                <video id="video1" class="movie-slider-video" src="./Assests/videoplayback (1).mp4" poster="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" preload="metadata">
+                </video>
+                <!-- Video Progress Bar -->
+                <div class="video-progress">
+                    <div class="progress-bar" id="progressBar1"></div>
+                </div>
+                <!-- Hover Info -->
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn" id="playBtn1">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="movie-slider-carousel-btn movie-slider-next-btn" id="nextBtn1">&#10095;</button>
+    </div>
+</div>
+
+ <!-- image slider video add section -->
+
+
+
+ <!-- image slider section -->
+ <div class="movie-slider-section">
+    <div class="movie-slider-header">
+        <h2 class="movie-slider-h2">South Indian Cinema</h2>
+        <a href="#" id="openModalBtn" class="explore-btn">Explore All &#8250;</a>
+    </div>
+    <div class="movie-slider-carousel-container">
+        <button style="z-index: 5;" class="movie-slider-carousel-btn movie-slider-prev-btn" id="prevBtn1">&#10094;</button>
+        <div class="movie-slider-carousel">
+            <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
+                <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
+                <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
+                <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
+                <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
+                <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->   <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
+                <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
+
+             
+        </div>
+        <button style="z-index: 5;" class="movie-slider-carousel-btn movie-slider-next-btn" id="nextBtn1">&#10095;</button>
+    </div>
+</div>
     <!-- image slider section -->
-    <div class="movie-slider-container">
-        <div class="movie-slider-header">
-            <h2 style="color: black; ">My List 1</h2>
-            <button id="openModalBtn"  style="color: black; " class="movie-slider-header a">Explore All</button>
-            <!-- <a id="openModalBtn"  style="color: black;" href="#">Explore All</a> -->
-        </div>
-        <button class="movie-slider-arrow-button movie-slider-arrow-left" data-slider="slider1">&lt;</button>
-        <button class="movie-slider-arrow-button movie-slider-arrow-right" data-slider="slider1">&gt;</button>
-        <div class="movie-slider" id="slider1">
-            <div class="movie-slider-item">
-                <a href="#">
-                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
-                </a>
-            </div>
-            <div class="movie-slider-item">
-                <a href="#">
-                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
-                </a>
-            </div>
-            <div class="movie-slider-item">
-                <a href="#">
-                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
-                </a>
-            </div>
-            <div class="movie-slider-item">
-                <a href="#">
-                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
-                </a>
-            </div>
-            <div class="movie-slider-item">
-                <a href="#">
-                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
-                </a>
-            </div>
-            <div class="movie-slider-item">
-                <a href="#">
-                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
-                </a>
-            </div>
 
-         
-            <!-- Add more slider items as needed -->
-        </div>
+
+
+     <!-- image slider section -->
+ <div class="movie-slider-section">
+    <div class="movie-slider-header">
+        <h2 class="movie-slider-h2">Critically Acclaimed Tv Shows</h2>
+        <a href="#" id="openModalBtn" class="explore-btn">Explore All &#8250;</a>
     </div>
+    <div class="movie-slider-carousel-container">
+        <button style="z-index: 5;" class="movie-slider-carousel-btn movie-slider-prev-btn" id="prevBtn1">&#10094;</button>
+        <div class="movie-slider-carousel">
+            <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
+              <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
+              <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
+              <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
+              <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
+              <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
+             <!-- Movie cards -->
+             <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
 
-    <div class="movie-slider-container">
-        <div class="movie-slider-header">
-            <h2 style="color: black; " >My List 2</h2>
-            <button id="openModalBtn"  style="color: black; " class="movie-slider-header a">Explore All</button>
+             <!-- Movie cards -->
+             <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
+              <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
+
+             
         </div>
-        <button class="movie-slider-arrow-button movie-slider-arrow-left" data-slider="slider2">&lt;</button>
-        <button class="movie-slider-arrow-button movie-slider-arrow-right" data-slider="slider2">&gt;</button>
-        <div class="movie-slider" id="slider2">
-            <div class="movie-slider-item">
-                <a href="#">
-                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
-                </a>
-            </div>
-            <div class="movie-slider-item">
-                <a href="#">
-                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
-                </a>
-            </div>
-            <div class="movie-slider-item">
-                <a href="#">
-                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
-                </a>
-            </div>
-            <div class="movie-slider-item">
-                <a href="#">
-                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
-                </a>
-            </div>
-            <div class="movie-slider-item">
-                <a href="#">
-                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
-                </a>
-            </div>
-            <div class="movie-slider-item">
-                <a href="#">
-                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
-                </a>
-            </div>
-            <!-- Add more slider items as needed -->
-        </div>
+        <button style="z-index: 5;" class="movie-slider-carousel-btn movie-slider-next-btn" id="nextBtn1">&#10095;</button>
     </div>
-
-    <div class="movie-slider-container">
-        <div class="movie-slider-header">
-            <h2 style="color: black; ">My List 3</h2>
-            <button id="openModalBtn"  style="color: black; " class="movie-slider-header a">Explore All</button>
-        </div>
-        <button class="movie-slider-arrow-button movie-slider-arrow-left" data-slider="slider3">&lt;</button>
-        <button class="movie-slider-arrow-button movie-slider-arrow-right" data-slider="slider3">&gt;</button>
-        <div class="movie-slider" id="slider3">
-            <div class="movie-slider-item">
-                <a  href="#">
-                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
-                </a>
-            </div>
-            <div class="movie-slider-item">
-                <a href="#">
-                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
-                </a>
-            </div>
-            <div class="movie-slider-item">
-                <a href="#">
-                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
-                </a>
-            </div>
-            <div class="movie-slider-item">
-                <a href="#">
-                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
-                </a>
-            </div>
-            <div class="movie-slider-item">
-                <a href="#">
-                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
-                </a>
-            </div> <div class="movie-slider-item">
-                <a href="#">
-                    <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="Anweshippin Kandethum">
-                </a>
-            </div>
-
-            <!-- Add more slider items as needed -->
-        </div>
-    </div>
-
+</div>
     <!-- image slider section -->
+
+
+
+     <!-- image slider section -->
+ <div class="movie-slider-section">
+    <div class="movie-slider-header">
+        <h2 class="movie-slider-h2">Hindi-language Movies</h2>
+        <a href="#" id="openModalBtn" class="explore-btn">Explore All &#8250;</a>
+    </div>
+    <div class="movie-slider-carousel-container">
+        <button style="z-index: 5;" class="movie-slider-carousel-btn movie-slider-prev-btn" id="prevBtn1">&#10094;</button>
+        <div class="movie-slider-carousel">
+            <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
+              <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
+              <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
+              <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
+              <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
+              <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
+              <!-- Movie cards -->
+            <div class="movie-slider-card">
+                <img src="https://occ-0-2164-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdxRN6M7GXdX2VI7hFsD1zyDPrNdsyDGWZJn91hw7iCMjaeujkG8QlotNsIHgbvnq_009ucbG1kud5Gm1BEah7uxJNu9WG89R4Q.webp?r=d3a" alt="DSP">
+                <div class="movie-slider-hover-info">
+                    <button class="movie-slider-play-btn">Play</button>
+                    <div class="movie-slider-details">
+                        <p>U/A 13+ | 2h 32m | Drama</p>
+                        <p>Intense • Emotional</p>
+                    </div>
+                    <div class="movie-slider-actions">
+                        <button class="fa fa-play"></button>
+                        <button class="fa fa-plus wishlist-button"></button>
+                        <button class="fa fa-thumbs-up thumbs-button"></button>
+                        <button class="open-modal-btn down-icon"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Repeat more movie cards -->
+             
+             
+        </div>
+        <button style="z-index: 5;" class="movie-slider-carousel-btn movie-slider-next-btn" id="nextBtn1">&#10095;</button>
+    </div>
+</div>
+    <!-- image slider section -->
+
+
+
+
+
     <!-- footer section -->
-    <footer class="footer">
+
+    <div style="background-color: black;">
+    <footer class="footer-container">
         <div class="footer-social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Facebook"></a>
+            <a href="#" aria-label="Instagram"></a>
+            <a href="#" aria-label="Twitter"></a>
+            <a href="#" aria-label="YouTube"></a>
         </div>
         <div class="footer-links">
-            <div>
-                <a href="#">Audio Description</a>
-                <a href="#">Investor Relations</a>
-                <a href="#">Legal Notices</a>
-            </div>
-            <div>
-                <a href="#">Help Centre</a>
-                <a href="#">Jobs</a>
-                <a href="#">Cookie Preferences</a>
-            </div>
-            <div>
-                <a href="#">Gift Cards</a>
-                <a href="#">Terms of Use</a>
-                <a href="#">Corporate Information</a>
-            </div>
-            <div>
-                <a href="#">Media Centre</a>
-                <a href="#">Privacy</a>
-                <a href="#">Contact Us</a>
-            </div>
+            <a href="#">Audio Description</a>
+            <a href="#">Help Centre</a>
+            <a href="#">Gift Cards</a>
+            <a href="#">Media Centre</a>
+            <a href="#">Investor Relations</a>
+            <a href="#">Jobs</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy</a>
+            <a href="#">Legal Notices</a>
+            <a href="#">Cookie Preferences</a>
+            <a href="#">Corporate Information</a>
+            <a href="#">Contact Us</a>
         </div>
-        <button class="service-code-button">Service Code</button>
-        <p class="footer-copyright">© 1997-2024 CipherHD, Inc.</p>
+        <div class="footer-service-code">
+            Service Code
+        </div>
+        <div class="footer-copyright">
+            © 1997-2024 YourCompany, Inc.
+        </div>
     </footer>
-
+</div>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <!-- footer section -->
     <script>
@@ -267,7 +944,7 @@
 
     hamburger.addEventListener('click', () => {
         header.classList.toggle('hd-banner-header-active');
-        navbar.classList.toggle('show'); // Toggle visibility of the navbar
+        navbar.classList.toggle('show');
     });
 });
 
@@ -276,61 +953,198 @@
 
 <!-- image slider section -->
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const scrollAmount = 200; // Amount to scroll when arrow is clicked
+       document.addEventListener('DOMContentLoaded', () => {
+    const sliders = document.querySelectorAll('.movie-slider-section');
 
-        function scrollSlider(sliderId, direction) {
-            const slider = document.getElementById(sliderId);
-            if (slider) {
-                if (direction === 'left') {
-                    slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-                } else if (direction === 'right') {
-                    slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-                }
-            }
+    sliders.forEach((slider, index) => {
+        const carousel = slider.querySelector('.movie-slider-carousel');
+        const prevBtn = slider.querySelector('.movie-slider-prev-btn');
+        const nextBtn = slider.querySelector('.movie-slider-next-btn');
+        const cardWidth = slider.querySelector('.movie-slider-card').offsetWidth;
+        const gap = 10; // gap between cards
+
+        const scrollAmount = cardWidth + gap;
+
+        function updateButtonVisibility() {
+            prevBtn.style.display = carousel.scrollLeft > 0 ? 'flex' : 'none';
+            nextBtn.style.display = 
+                carousel.scrollLeft < carousel.scrollWidth - carousel.clientWidth ? 'flex' : 'none';
         }
 
-        const leftButtons = document.querySelectorAll('.movie-slider-arrow-left');
-        const rightButtons = document.querySelectorAll('.movie-slider-arrow-right');
-
-        leftButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const sliderId = button.getAttribute('data-slider');
-                scrollSlider(sliderId, 'left');
+        prevBtn.addEventListener('click', () => {
+            carousel.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
             });
         });
 
-        rightButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const sliderId = button.getAttribute('data-slider');
-                scrollSlider(sliderId, 'right');
+        nextBtn.addEventListener('click', () => {
+            carousel.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
             });
+        });
+
+        carousel.addEventListener('scroll', updateButtonVisibility);
+        window.addEventListener('resize', updateButtonVisibility);
+
+        // Initial update
+        updateButtonVisibility();
+
+        // Touch events for mobile swipe
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        carousel.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchStartX > touchEndX) {
+                carousel.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            } else if (touchStartX < touchEndX) {
+                carousel.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
+});
+
 </script>
 
 <!-- image slider section -->
 
 <!-- today details popup -->
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const modal = document.querySelector('.modal');
-        const openModalBtn = document.getElementById('openModalBtn');
-        const closeButton = document.querySelector('.close-button');
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.querySelector('#modal');
+            const exploreButtons = document.querySelectorAll('.explore-btn'); // Select all explore buttons
+            const closeButton = document.querySelector('.close-button');
 
-        openModalBtn.addEventListener('click', () => {
-            setTimeout(() => {
-                modal.style.display = 'flex';
-                document.body.style.overflow = 'hidden'; // Disable body scroll when modal is open
-            }, 2000); // Delay opening the modal by 2000ms (2 seconds)
+            // Loop through each "Explore" button and attach event listener
+            exploreButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    event.preventDefault(); // Prevent link from navigating
+                    modal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden'; // Disable body scroll when modal is open
+                });
+            });
+
+            closeButton.addEventListener('click', () => {
+                modal.style.display = 'none';
+                document.body.style.overflow = ''; // Restore body scroll
+            });
+
+            // Optional: Close modal if user clicks outside modal content
+            window.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+            });
         });
+    </script>
+<!-- today details popup -->
 
-        closeButton.addEventListener('click', () => {
-            modal.style.display = 'none';
-            document.body.style.overflow = ''; // Restore body scroll
+
+<!-- wishlist -->
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Select all buttons with the 'wishlist-button' class
+    const wishlistButtons = document.querySelectorAll('.wishlist-button');
+
+    wishlistButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Toggle between plus and check icons
+            if (button.classList.contains('fa-plus')) {
+                button.classList.remove('fa-plus');
+                button.classList.add('fa-check');
+            } else {
+                button.classList.remove('fa-check');
+                button.classList.add('fa-plus');
+            }
         });
     });
+});
+
+   // Handle thumbs-up button color toggle
+   const thumbsButtons = document.querySelectorAll('.thumbs-button');
+    thumbsButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            button.classList.toggle('red');
+        });
+    });
+
 </script>
-<!-- today details popup -->
+<!-- wishlist -->  
+<!-- detail section -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const openModalButtons = document.querySelectorAll('.open-modal-btn');
+        const closeModalButton = document.getElementById('close');
+        const modal = document.getElementById('detail-modal');
+    
+        // Function to show the modal
+        function openModal() {
+            modal.style.display = 'flex'; // Show the modal
+        }
+    
+        // Attach event listener to all buttons
+        openModalButtons.forEach(button => {
+            button.addEventListener('click', openModal);
+        });
+    
+        // Close the modal
+        closeModalButton.addEventListener('click', () => {
+            modal.style.display = 'none'; // Hide the modal
+        });
+    
+        // Optional: Hide modal when clicking outside of modal content
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+    
+    
+    </script>
+    <!-- detail section -->
+ <!-- image slider video add section -->
+ <script>
+    document.getElementById('playBtn1').addEventListener('click', function() {
+    const video = document.getElementById('video1');
+    const progressBar = document.getElementById('progressBar1');
+
+    if (video.paused) {
+        video.play();
+        this.textContent = "Pause";
+    } else {
+        video.pause();
+        this.textContent = "Play";
+    }
+
+    // Update progress bar as video plays
+    video.ontimeupdate = function() {
+        const percentage = (video.currentTime / video.duration) * 100;
+        progressBar.style.width = percentage + '%';
+    };
+
+    // When video ends, reset play button text and progress bar
+    video.onended = function() {
+        document.getElementById('playBtn1').textContent = "Play";
+        progressBar.style.width = '0%';
+    };
+});
+
+</script>
+    <!-- image slider video add section -->
 </body>
 </html>
